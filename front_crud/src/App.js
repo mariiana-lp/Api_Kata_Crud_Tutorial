@@ -108,7 +108,7 @@ const List = () => {
           <tr>
             <td>ID</td>
             <td>Actividad a realizar</td>
-            <td>¿Está completado?</td>
+            <td>Estado</td>
           </tr>
         </thead>
         <tbody>
@@ -116,7 +116,7 @@ const List = () => {
             return <tr key={todo.id}>
               <td>{todo.id}</td>
               <td>{todo.name}</td>
-              <td>{todo.isCompleted === true ? "SI" : "NO"}</td>
+              <td>{todo.isCompleted === true ? "Completado" : "Pendiente"}</td>
               <td><button className="btn btn-info" onClick={() => onEdit(todo)}>Editar</button></td>
               <td><button className="btn btn-danger" onClick={() => onDelete(todo.id)}>Eliminar</button></td>
             </tr>
